@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sniglet">
+    <link rel="shortcut icon" href="/images/4571485.png" type="image/x-icon">
+</head>
+<body>
+   <div class="body-background">
+     <!-- Search Bar -->
+     <section class="search">
+        <div class="container">
+            <div class="search-bar">
+                <form action="/" method="post">
+                    <input type="text" name="cityName" placeholder="Search Location">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Display Card -->
+    <section class="display">
+        <div class="container">
+            <div class="display-card">
+                <div class="city-name">
+                    <h1><%= locals.city %></h1>
+                </div>
+                <div class="descrption">
+                    <h2><%= locals.condition %></h2>
+                </div>
+                <div class="temperature">
+                    <h1><%= locals.actualTemperature %>°C</h1>
+                </div>
+                <div class="details">
+                    <div class="feels-like">
+                        <h1>Feels like</h1>
+                        <h2><%= locals.feelTemperature %>°C</h2>
+                    </div>
+                    <div class="Humidity">
+                        <h1>Humidity</h1>
+                        <h2><%= locals.humidity %>%</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <div class="footer">
+        Made with ❤️ by Aryan
+    </div>
+   </div>
+</body>
+</html>
